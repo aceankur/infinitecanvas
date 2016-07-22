@@ -1,0 +1,10 @@
+<resources>
+    <string name="app_name">Android</string>
+    <string name="title_activity_maps">Map</string>
+
+    <string name="title_activity_webview">WebviewActivity</string>
+    <string name="dummy_button">Dummy Button</string>
+    <string name="dummy_content">DUMMY\nCONTENT</string>
+
+    <string name="title_activity_fullscreen">FullscreenActivity</string>
+</resources>

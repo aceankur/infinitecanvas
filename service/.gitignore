@@ -1,0 +1,21 @@
+# Windows image file caches
+Thumbs.db
+
+# Folder config file
+Desktop.ini
+
+# Mac crap
+.DS_Store
+
+# build stuff
+*.class
+target
+
+# idea
+service.iml
+*.ipr
+*.iws
+.idea
+
+signals-service.iml
+dependency-reduced-pom.xml

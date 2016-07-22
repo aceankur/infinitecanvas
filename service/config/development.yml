@@ -1,0 +1,55 @@
+server:
+  applicationConnectors:
+  - type: http
+    port: 9320
+  - type: https
+    port: 9321
+    keyStorePath: /Users/ankurjain.v/.keystore/keystore.jks
+    keyStorePassword: 123456
+    trustStorePath: /Library/Java/JavaVirtualMachines/jdk1.8.0_74.jdk/Contents/Home/jre/lib/security/cacerts
+    certAlias: selfsigned
+  adminConnectors:
+  - type: http
+    port: 9322
+  requestLog:
+    timeZone: IST
+    appenders:
+        - type: file
+          currentLogFilename: requests.log
+          threshold: ALL
+          archive: true
+          archivedLogFilenamePattern: requests-%d.log.gz
+          archivedFileCount: 10
+          timeZone: IST
+        - type: console
+          timeZone: IST
+          threshold: INFO
+
+logging:
+  level: DEBUG
+  appenders:
+    - type: file
+      currentLogFilename: app.log
+      threshold: ALL
+      archive: true
+      archivedLogFilenamePattern: app-%d.log.gz
+      archivedFileCount: 10
+      timeZone: IST
+    - type: console
+      timeZone: IST
+      threshold: INFO
+
+database:
+  driverClass: org.postgresql.Driver
+  user: ttadmin
+  password: samismyb1tch
+  url: jdbc:postgresql://localhost:5432/infinitecanvas
+  properties:
+      charSet: UTF-8
+  minSize: 2
+  maxSize: 10
+  checkConnectionWhileIdle: true
+  maxWaitForConnection: 1s
+  validationQuery: "/* Health Check */ SELECT 1"
+  logValidationErrors: true
+  checkConnectionOnBorrow: true

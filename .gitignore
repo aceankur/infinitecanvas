@@ -1,0 +1,11 @@
+*.iml
+.idea/
+/out/
+/output/
+/target/
+/bin/
+dependency-reduced-pom.xml
+*.swp
+*.rdb
+log/*
+service/*.log
